@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7STAIRSS — Brand Building Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- INTRO ANIMATION -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-content">
+      <div class="intro-logo">
+        <span class="intro-seven">7</span><span class="intro-stairss">STAIRSS</span>
+      </div>
+      <div class="intro-tagline">Complete Brand Building · A to Z</div>
+      <div class="intro-bar"></div>
+    </div>
+    <div class="intro-wipe"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="logo"><span class="logo-seven">7</span>STAIRSS</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#stairs">Our Stairs</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get Started</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-logo"><span class="logo-seven">7</span>STAIRSS</div>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#stairs" class="mobile-link">Our Stairs</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#process" class="mobile-link">Process</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#contact" class="mobile-cta">Get Started</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <!-- VIDEO BACKGROUND -->
+    <div class="hero-video-wrap" id="heroVideoWrap">
+      <video autoplay muted loop playsinline id="heroVideo">
+        <source src="hero-video.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <!-- CSS REEL FALLBACK (shown when no video file is present) -->
+    <div class="hero-reel" id="heroReel">
+
+      <!-- Scene 1: Video Editing -->
+      <div class="reel-scene">
+        <span class="reel-scene-label">Video Editing</span>
+        <div class="reel-mock timeline">
+          <div class="tl-header">
+            <div class="tl-dot r"></div><div class="tl-dot y"></div><div class="tl-dot g"></div>
+            <span class="tl-title">PREMIERE PRO — BRAND REEL v3.mp4</span>
+          </div>
+          <div class="tl-preview">
+            <div class="tl-scanline"></div>
+            <div class="tl-play"></div>
+          </div>
+          <div class="tl-tracks">
+            <div class="tl-track v1"></div>
+            <div class="tl-track v2"></div>
+            <div class="tl-track a1"></div>
+            <div class="tl-track a2"></div>
+          </div>
+          <div class="tl-label">4K · 60fps · Color Graded</div>
+        </div>
+      </div>
+
+      <!-- Scene 2: Social Media -->
+      <div class="reel-scene">
+        <span class="reel-scene-label">Social Media</span>
+        <div class="reel-mock social">
+          <div class="sm-topbar">
+            <div class="sm-avatar"></div>
+            <div class="sm-handle">@yourbrand <span>7STAIRSS Client · 84.2K followers</span></div>
+          </div>
+          <div class="sm-grid">
+            <div class="sm-post p1"></div>
+            <div class="sm-post p2"></div>
+            <div class="sm-post p3"></div>
+            <div class="sm-post p4"></div>
+            <div class="sm-post p5"></div>
+            <div class="sm-post p6"></div>
+          </div>
+          <div class="sm-likes">
+            <div class="sm-stat"><strong>84.2K</strong>Followers</div>
+            <div class="sm-stat"><strong>+12.4%</strong>This Month</div>
+            <div class="sm-stat"><strong>6.8%</strong>Eng. Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 3: Shoots -->
+      <div class="reel-scene">
+        <span class="reel-scene-label">Brand Shoots</span>
+        <div class="reel-mock shoot">
+          <div class="shoot-viewfinder">
+            <div class="vf-corner tl"></div>
+            <div class="vf-corner tr"></div>
+            <div class="vf-corner bl"></div>
+            <div class="vf-corner br"></div>
+            <div class="vf-center">
+              <div class="vf-crosshair"></div>
+              <div class="vf-rec"><div class="vf-rec-dot"></div>REC</div>
+            </div>
+            <div class="vf-info">
+              <span>f/1.8 · ISO 400 · 1/200s</span>
+              <span>4K 60fps</span>
+            </div>
+          </div>
+          <div class="shoot-stats">
+            <div class="shoot-stat"><span>Scene</span><span>04 / 12</span></div>
+            <div class="shoot-stat"><span>Storage</span><span>128 GB</span></div>
+            <div class="shoot-stat"><span>Battery</span><span>87%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 4: Meta Ads Performance -->
+      <div class="reel-scene">
+        <span class="reel-scene-label">Meta Ads</span>
+        <div class="reel-mock ads">
+          <div class="ads-header">Campaign Performance · Last 30 Days</div>
+          <div class="ads-kpi-row">
+            <div class="ads-kpi">
+              <div class="ads-kpi-val green">3.8x</div>
+              <div class="ads-kpi-lbl">ROAS</div>
+            </div>
+            <div class="ads-kpi">
+              <div class="ads-kpi-val">₹1.2</div>
+              <div class="ads-kpi-lbl">CPC</div>
+            </div>
+            <div class="ads-kpi">
+              <div class="ads-kpi-val red-v">↑42%</div>
+              <div class="ads-kpi-lbl">CTR</div>
+            </div>
+          </div>
+          <div class="ads-chart">
+            <div class="ads-bar"></div>
+            <div class="ads-bar"></div>
+            <div class="ads-bar"></div>
+            <div class="ads-bar"></div>
+            <div class="ads-bar"></div>
+            <div class="ads-bar"></div>
+            <div class="ads-bar"></div>
+            <div class="ads-bar active"></div>
+          </div>
+          <div class="ads-tag">Live Campaign · ₹50K Budget</div>
+        </div>
+      </div>
+
+    </div><!-- /hero-reel -->
+
+    <div class="hero-bg-text">7STAIRSS</div>
+    <div class="hero-content">
+      <div class="hero-badge">Complete Brand Building · A to Z</div>
+      <h1 class="hero-title">
+        We Build<br />
+        <span class="red">Brands</span> That<br />
+        <span class="outline">Dominate.</span>
+      </h1>
+      <p class="hero-sub">
+        From zero to iconic — 7STAIRSS delivers every service your brand needs to own its market. One agency. Seven pillars. Limitless growth.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Start Your Journey</a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
+      </div>
+    </div>
+    <!-- HERO STAIRCASE -->
+    <div class="hero-stairs" aria-hidden="true">
+      <div class="hero-stair hs1"><div class="hs-block"><span class="hs-num">01</span><span class="hs-word">FIND</span></div></div>
+      <div class="hero-stair hs2"><div class="hs-block"><span class="hs-num">02</span><span class="hs-word">LOOK</span></div></div>
+      <div class="hero-stair hs3"><div class="hs-block"><span class="hs-num">03</span><span class="hs-word">REACH</span></div></div>
+      <div class="hero-stair hs4"><div class="hs-block"><span class="hs-num">04</span><span class="hs-word">CREATE</span></div></div>
+      <div class="hero-stair hs5"><div class="hs-block"><span class="hs-num">05</span><span class="hs-word">ENGAGE</span></div></div>
+      <div class="hero-stair hs6"><div class="hs-block"><span class="hs-num">06</span><span class="hs-word">GROW</span></div></div>
+      <div class="hero-stair hs7"><div class="hs-block"><span class="hs-num">07</span><span class="hs-word">BUILD</span></div></div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>SEO</span><span class="dot">✦</span>
+      <span>Meta Ads</span><span class="dot">✦</span>
+      <span>Graphic Design</span><span class="dot">✦</span>
+      <span>Influencer Marketing &amp; Reels</span><span class="dot">✦</span>
+      <span>Social Media Marketing</span><span class="dot">✦</span>
+      <span>Video Editing</span><span class="dot">✦</span>
+      <span>SaaS &amp; Digital Products</span><span class="dot">✦</span>
+      <span>SEO</span><span class="dot">✦</span>
+      <span>Meta Ads</span><span class="dot">✦</span>
+      <span>Graphic Design</span><span class="dot">✦</span>
+      <span>Influencer Marketing &amp; Reels</span><span class="dot">✦</span>
+      <span>Social Media Marketing</span><span class="dot">✦</span>
+      <span>Video Editing</span><span class="dot">✦</span>
+      <span>SaaS &amp; Digital Products</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- 7 STAIRS SECTION -->
+  <section class="stairs-section" id="stairs">
+    <div class="container">
+      <div class="stairs-section-header">
+        <div class="stairs-section-text">
+          <span class="section-label">The 7 Stairs</span>
+          <h2 class="section-title">Every Brand Climbs<br /><span class="red">These Seven Steps.</span></h2>
+          <p>We don't just run campaigns — we architect your entire ascent. Each stair represents a pillar of brand-building that compounds into market dominance.</p>
+        </div>
+      </div>
+
+      <div class="stairs-visual-wrap">
+        <div class="stairs-visual">
+
+          <div class="sv-stair" data-service="SEO &amp; Organic Search" data-desc="Rank where your customers are searching. Technical SEO, content strategy, and authority building that compounds over time.">
+            <div class="sv-block">
+              <span class="sv-num">01</span>
+              <span class="sv-word">FIND</span>
+            </div>
+            <div class="sv-label">SEO</div>
+          </div>
+
+          <div class="sv-stair" data-service="Graphic Design &amp; Identity" data-desc="A brand that looks the part wins the first impression. Logos, brand kits, and social creatives crafted to perfection.">
+            <div class="sv-block">
+              <span class="sv-num">02</span>
+              <span class="sv-word">LOOK</span>
+            </div>
+            <div class="sv-label">Design</div>
+          </div>
+
+          <div class="sv-stair" data-service="Meta Ads &amp; Paid Media" data-desc="Put your brand in front of exactly the right people. Precision targeting that turns ad spend into measurable profit.">
+            <div class="sv-block">
+              <span class="sv-num">03</span>
+              <span class="sv-word">REACH</span>
+            </div>
+            <div class="sv-label">Meta Ads</div>
+          </div>
+
+          <div class="sv-stair" data-service="Video Editing &amp; Content" data-desc="Raw footage becomes cinematic stories. Ads, reels, brand films — every frame crafted to captivate and convert.">
+            <div class="sv-block">
+              <span class="sv-num">04</span>
+              <span class="sv-word">CREATE</span>
+            </div>
+            <div class="sv-label">Video</div>
+          </div>
+
+          <div class="sv-stair" data-service="Social Media Marketing" data-desc="Consistent presence across every platform. Content calendars, community management, and analytics that drive real growth.">
+            <div class="sv-block">
+              <span class="sv-num">05</span>
+              <span class="sv-word">ENGAGE</span>
+            </div>
+            <div class="sv-label">Social</div>
+          </div>
+
+          <div class="sv-stair" data-service="Influencer Marketing &amp; Reels" data-desc="Authentic voices amplify your brand. We connect you with the right creators for campaigns that build real trust at scale.">
+            <div class="sv-block">
+              <span class="sv-num">06</span>
+              <span class="sv-word">GROW</span>
+            </div>
+            <div class="sv-label">Influence</div>
+          </div>
+
+          <div class="sv-stair sv-stair--peak" data-service="SaaS &amp; Digital Products" data-desc="Build something that earns while you sleep. We design and launch digital products that generate recurring revenue for your brand.">
+            <div class="sv-block">
+              <span class="sv-num">07</span>
+              <span class="sv-word">BUILD</span>
+            </div>
+            <div class="sv-label">SaaS</div>
+          </div>
+
+        </div>
+
+        <!-- Info panel (populated by JS on hover) -->
+        <div class="stairs-info-panel" id="stairsPanel">
+          <div class="sip-number" id="sipNum">01</div>
+          <div class="sip-service" id="sipService">SEO &amp; Organic Search</div>
+          <p class="sip-desc" id="sipDesc">Rank where your customers are searching. Technical SEO, content strategy, and authority building that compounds over time.</p>
+          <div class="sip-bar"><div class="sip-bar-fill" id="sipBarFill"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">7 Pillars of <span class="red">Brand Power</span></h2>
+        <p class="section-sub">Every stair takes your brand higher. Together they build an empire.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card" data-num="01">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=800&q=80" alt="SEO Analytics" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="3"/>
+                <line x1="29" y1="29" x2="42" y2="42" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <line x1="16" y1="20" x2="24" y2="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="20" y1="16" x2="20" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-num">01</div>
+            <h3>Search Engine Optimization</h3>
+            <p>Rank on page 1, stay there. We engineer organic growth through technical SEO, content strategy, and authority building that compounds over time.</p>
+            <div class="service-tags">
+              <span>Technical SEO</span><span>Content Strategy</span><span>Link Building</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card featured" data-num="02">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Meta Ads" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="8" width="40" height="28" rx="4" stroke="currentColor" stroke-width="3"/>
+                <path d="M16 36L14 42M32 36L34 42M10 42H38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M18 22L22 26L30 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="service-num">02</div>
+            <h3>Meta Ads &amp; Paid Media</h3>
+            <p>Turn ad spend into profit. Precision-targeted Facebook &amp; Instagram campaigns designed to convert cold traffic into loyal customers.</p>
+            <div class="service-tags">
+              <span>Facebook Ads</span><span>Instagram Ads</span><span>Retargeting</span>
+            </div>
+            <div class="featured-badge">Most Popular</div>
+          </div>
+        </div>
+
+        <div class="service-card" data-num="03">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="3"/>
+                <circle cx="17" cy="17" r="4" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M6 32L16 22L22 28L30 20L42 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="service-num">03</div>
+            <h3>Graphic Design</h3>
+            <p>Visual identity that stops the scroll. Logos, brand kits, social creatives, banners — every pixel crafted to communicate your brand's power.</p>
+            <div class="service-tags">
+              <span>Brand Identity</span><span>Social Creatives</span><span>Print Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-num="04">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=800&q=80" alt="Influencer Marketing" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="14" r="8" stroke="currentColor" stroke-width="3"/>
+                <circle cx="8" cy="30" r="5" stroke="currentColor" stroke-width="2.5"/>
+                <circle cx="40" cy="30" r="5" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M12 28C14 22 18 18 24 18C30 18 34 22 36 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M4 42C4 37 6 34 8 34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M44 42C44 37 42 34 40 34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-num">04</div>
+            <h3>Influencer Marketing &amp; Reels</h3>
+            <p>Authentic creators meet high-impact content. We source the right influencers and produce scroll-stopping Reels, Shorts &amp; TikToks — all in one power move.</p>
+            <div class="service-tags">
+              <span>Influencer Sourcing</span><span>Reels &amp; Shorts</span><span>TikTok</span><span>ROI Tracking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-num="05">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80" alt="Social Media Marketing" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="10" width="28" height="20" rx="3" stroke="currentColor" stroke-width="3"/>
+                <path d="M32 18L44 12V36L32 30" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                <line x1="12" y1="38" x2="36" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-num">05</div>
+            <h3>Social Media Marketing</h3>
+            <p>Consistent. Strategic. Viral. Full-funnel social management across Instagram, Facebook, LinkedIn &amp; more — content to community to conversions.</p>
+            <div class="service-tags">
+              <span>Content Calendar</span><span>Community Management</span><span>Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-num="06">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Video Editing" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 40V8L40 24L8 40Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                <line x1="24" y1="10" x2="24" y2="14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="24" y1="34" x2="24" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="10" y1="24" x2="14" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="34" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-num">06</div>
+            <h3>Video Editing</h3>
+            <p>Raw footage in, cinema-quality content out. Ads, brand films, testimonials, YouTube — edited to captivate and convert at every touchpoint.</p>
+            <div class="service-tags">
+              <span>Ad Creatives</span><span>Brand Films</span><span>YouTube</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card" data-num="07">
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="SaaS Development" loading="lazy" />
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="10" width="40" height="28" rx="5" stroke="currentColor" stroke-width="3"/>
+                <circle cx="14" cy="24" r="4" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="22" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="22" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="22" y1="28" x2="32" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 4V10M32 4V10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M16 38V44M32 38V44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="service-num">07</div>
+            <h3>SaaS &amp; Digital Products</h3>
+            <p>From idea to launch — we design and develop SaaS platforms, web apps, and digital products that grow alongside your brand and generate recurring revenue.</p>
+            <div class="service-tags">
+              <span>SaaS Development</span><span>Web Apps</span><span>Product Design</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK GALLERY -->
+  <section class="work-gallery" id="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Where <span class="red">Ideas</span> Become Results</h2>
+        <p class="section-sub">A glimpse into the shoots, edits, campaigns, and creatives we've built for brands like yours.</p>
+      </div>
+      <div class="work-grid">
+        <div class="work-item work-item--tall">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=85" alt="Brand Shoot" loading="lazy" />
+          <div class="work-item-overlay">
+            <span class="work-tag">Brand Shoots</span>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=700&q=85" alt="Video Editing" loading="lazy" />
+          <div class="work-item-overlay">
+            <span class="work-tag">Video Editing</span>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=700&q=85" alt="Graphic Design" loading="lazy" />
+          <div class="work-item-overlay">
+            <span class="work-tag">Graphic Design</span>
+          </div>
+        </div>
+        <div class="work-item work-item--wide">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85" alt="Meta Ads" loading="lazy" />
+          <div class="work-item-overlay">
+            <span class="work-tag">Meta Ads</span>
+          </div>
+        </div>
+      </div>
+      <div class="work-grid-2">
+        <div class="work-item">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=700&q=85" alt="Social Media" loading="lazy" />
+          <div class="work-item-overlay">
+            <span class="work-tag">Social Media</span>
+          </div>
+        </div>
+        <div class="work-item work-item--wide2">
+          <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1000&q=85" alt="Photography" loading="lazy" />
+          <div class="work-item-overlay">
+            <span class="work-tag">Photography</span>
+          </div>
+        </div>
+        <div class="work-item">
+          <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=700&q=85" alt="Influencer Content" loading="lazy" />
+          <div class="work-item-overlay">
+            <span class="work-tag">Influencer &amp; Reels</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-left">
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-title">One Agency.<br /><span class="red">Every Step.</span></h2>
+        <p>7STAIRSS was built on a simple truth: great brands don't happen by accident. They're built stair by stair — with strategy, creativity, and relentless execution.</p>
+        <p>We are a full-service brand-building powerhouse. Whether you're a startup finding your voice or an established business ready to scale, we handle everything under one roof so nothing falls between the cracks.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="7">7</span>
+            <span class="stat-label">Core Services</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">A–Z</span>
+            <span class="stat-label">Brand Building</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="100" data-suffix="%">100%</span>
+            <span class="stat-label">Dedicated</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-card-stack">
+          <div class="about-card ac1">
+            <div class="ac-icon">🔥</div>
+            <strong>Bold Strategy</strong>
+            <p>We don't play it safe. Every campaign is built to stand out and dominate.</p>
+          </div>
+          <div class="about-card ac2">
+            <div class="ac-icon">⚡</div>
+            <strong>Fast Execution</strong>
+            <p>Speed without compromising quality. Timelines that respect your business goals.</p>
+          </div>
+          <div class="about-card ac3">
+            <div class="ac-icon">📈</div>
+            <strong>Results-Driven</strong>
+            <p>Every decision is backed by data. We measure what matters and double down on what works.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">The <span class="red">7STAIRSS</span> Process</h2>
+        <p class="section-sub">Every brand journey follows a proven staircase — from discovery to domination.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Discovery &amp; Audit</h4>
+            <p>We deep-dive into your brand, competitors, and market to find exactly where the opportunity lies.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Strategy Blueprint</h4>
+            <p>A custom 360° brand strategy covering all 7 service pillars, tailored to your goals and budget.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Brand Identity</h4>
+            <p>Visual identity, tone of voice, and brand guidelines — the foundation everything is built on.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Content Creation</h4>
+            <p>Graphics, videos, reels, and copy — produced in-house by our creative team, consistently.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h4>Launch &amp; Amplify</h4>
+            <p>Multi-channel rollout — organic, paid, and influencer — executed simultaneously for maximum impact.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">06</div>
+          <div class="step-content">
+            <h4>Optimize &amp; Scale</h4>
+            <p>Real-time analytics, A/B testing, and weekly reporting. We iterate fast and scale what converts.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">07</div>
+          <div class="step-content">
+            <h4>Dominate Your Market</h4>
+            <p>Sustainable brand equity, loyal community, and compounding growth. This is the 7th stair — the top.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-bg-text">GROW</div>
+    <div class="container cta-inner">
+      <h2>Ready to Climb?</h2>
+      <p>Let's build your brand from the ground up — or take it to the next level. Either way, 7STAIRSS has you covered.</p>
+      <a href="#contact" class="btn-primary large">Book a Free Strategy Call</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-left">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's Build<br /><span class="red">Something Big.</span></h2>
+        <p>Tell us about your brand and we'll put together a custom strategy — no strings attached.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="ci-label">Email</span>
+            <span>hello@7stairss.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="ci-label">Instagram</span>
+            <span>@7stairss</span>
+          </div>
+          <div class="contact-item">
+            <span class="ci-label">Response Time</span>
+            <span>Within 24 hours</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand / Company</label>
+            <input type="text" id="brand" name="brand" placeholder="Your brand name" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service You Need</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>SEO</option>
+              <option>Meta Ads</option>
+              <option>Graphic Design</option>
+              <option>Influencer Marketing &amp; Reels</option>
+              <option>Social Media Marketing</option>
+              <option>Video Editing</option>
+              <option>SaaS &amp; Digital Products</option>
+              <option>Full Brand Building (All 7)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Brand</label>
+            <textarea id="message" name="message" placeholder="What's your goal? Where are you now? What do you want to achieve?" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><span class="logo-seven">7</span>STAIRSS</span>
+        <p>Complete brand building, A to Z.<br />Seven services. One vision. Your success.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-col-title">Services</span>
+        <a href="#services">SEO</a>
+        <a href="#services">Meta Ads</a>
+        <a href="#services">Graphic Design</a>
+        <a href="#services">Influencer Marketing &amp; Reels</a>
+        <a href="#services">Social Media Marketing</a>
+        <a href="#services">Video Editing</a>
+        <a href="#services">SaaS &amp; Digital Products</a>
+      </div>
+      <div class="footer-links">
+        <span class="footer-col-title">Company</span>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 7STAIRSS. All rights reserved.</span>
+      <span>Built to Dominate.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
