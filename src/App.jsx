@@ -23,6 +23,8 @@ import {
   Code,
   Zap,
   Instagram,
+  Star,
+  ExternalLink,
 } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -33,7 +35,7 @@ gsap.registerPlugin(ScrollTrigger)
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
-  { label: 'Approach', href: '#approach' },
+  { label: 'Clients', href: '#clients' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -73,6 +75,126 @@ const SERVICES_FULL = [
     icon: Code,
     title: 'SaaS & Digital Products',
     text: 'From idea to launch — we design and develop SaaS platforms, web apps, and digital products that generate recurring revenue for your brand.',
+  },
+]
+
+const CLIENTS = [
+  {
+    logo: '/logo-vestro.jpg',
+    logoBg: 'bg-white',
+    name: 'Vestro Styles',
+    handle: '@vestrostyles',
+    category: 'Clothing · Streetwear',
+    founder: 'Anshika Jain',
+    desc: 'A bold D2C streetwear label redefining Indian street fashion with clean cuts, graphic identity, and culture-first drops.',
+    services: ['Meta Ads', 'Social Media', 'Content'],
+    link: 'https://instagram.com/vestrostyles',
+  },
+  {
+    logo: '/logo-rizzva.png',
+    logoBg: 'bg-black',
+    name: 'Rizzva',
+    handle: '@rizzva',
+    category: 'D2C Streetwear',
+    founder: 'Vansh Rawat',
+    desc: 'A streetwear brand built around edge, identity, and raw aesthetic energy — designed for the culture, worn by the bold.',
+    services: ['Brand Identity', 'Marketing', 'Content'],
+    link: 'https://instagram.com/rizzva',
+  },
+  {
+    logo: null,
+    logoBg: 'bg-amber-50',
+    name: 'Paper Hugs',
+    handle: '@paper_hugs_official',
+    category: 'Gifts & Accessories',
+    founder: 'Kinjal',
+    desc: 'Handcrafted gifting brand shipping affordable, heartfelt gifts across India — polaroids, letters, frames, and hampers.',
+    services: ['Social Media', 'Influencer Mktg', 'Content'],
+    link: 'https://instagram.com/paper_hugs_official',
+    website: 'https://paperhugs.in',
+    emoji: '🎁',
+  },
+  {
+    logo: '/logo-zobique.jpg',
+    logoBg: 'bg-white',
+    name: 'Zobique',
+    handle: null,
+    category: 'Tech Platform',
+    founder: 'Rishab Chettri',
+    desc: 'A next-generation tech platform building digital infrastructure that powers modern businesses and seamless user experiences.',
+    services: ['SEO', 'Brand Identity', 'Web Design'],
+    link: null,
+  },
+  {
+    logo: null,
+    logoBg: 'bg-zinc-900',
+    name: 'YourCaptureBuddy',
+    handle: '@yourcapturebuddy',
+    category: 'Photography · Content',
+    founder: 'Aniket',
+    desc: 'A creative photography and content creation studio capturing brands, events, and stories through a lens that makes every frame count.',
+    services: ['Brand Shoots', 'Social Media', 'SEO'],
+    link: 'https://vikdwell.my.canva.site/yourcapturebuddy',
+    website: 'https://vikdwell.my.canva.site/yourcapturebuddy',
+    emoji: '📸',
+  },
+]
+
+const TESTIMONIALS = [
+  {
+    id: 'vestro',
+    name: 'Anshika Jain',
+    role: 'Founder, Vestro Styles',
+    company: 'Vestro Styles',
+    initials: 'AJ',
+    color: 'bg-primary text-black',
+    rating: 5,
+    quote:
+      '"7STAIRSS completely elevated how Vestro Styles shows up online. The Meta Ads campaigns hit a 4.2× ROAS and the content calendar they built brought real consistency to our Instagram. They actually understand streetwear — not just marketing."',
+  },
+  {
+    id: 'rizzva',
+    name: 'Vansh Rawat',
+    role: 'Founder, Rizzva',
+    company: 'Rizzva',
+    initials: 'VR',
+    color: 'bg-zinc-800 border border-white/10 text-ink',
+    rating: 5,
+    quote:
+      '"7STAIRSS understood the Rizzva identity from day one. The content they create feels authentic to the brand — not generic agency output. Our reels engagement jumped and the brand positioning finally matches the quality of what we make."',
+  },
+  {
+    id: 'paperhugs',
+    name: 'Kinjal',
+    role: 'Founder, Paper Hugs',
+    company: 'Paper Hugs',
+    initials: 'K',
+    color: 'bg-amber-100 text-amber-900',
+    rating: 5,
+    quote:
+      '"We went from zero digital strategy to a fully-running social and influencer setup in weeks. 7STAIRSS helped Paper Hugs reach exactly the right audience. Our best-ever revenue month came right after their first campaign went live."',
+  },
+  {
+    id: 'zobique',
+    name: 'Rishab Chettri',
+    role: 'Founder, Zobique',
+    company: 'Zobique',
+    initials: 'RC',
+    color: 'bg-orange-500 text-white',
+    rating: 5,
+    quote:
+      '"7STAIRSS handled our SEO and brand identity end to end. Within two months our organic traffic had doubled and the visual identity they built gave Zobique the professional edge we needed to compete seriously in the market."',
+  },
+  {
+    id: 'capturebuddy',
+    name: 'Aniket',
+    role: 'Founder, YourCaptureBuddy',
+    company: 'YourCaptureBuddy',
+    initials: 'A',
+    color: 'bg-accent text-black',
+    rating: 5,
+    quote:
+      '"7STAIRSS helped YourCaptureBuddy go from a personal project to a recognizable brand. The social media strategy and SEO work they did brought in consistent client inquiries we never had before. Every rupee invested came back multiplied."',
   },
 ]
 
@@ -1117,6 +1239,248 @@ function ServicesGrid() {
 }
 
 /* ----------------------------------------------------------------
+   Clients Section — Brands We've Built For
+---------------------------------------------------------------- */
+function ClientsSection() {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.client-card', {
+        scrollTrigger: { trigger: ref.current, start: 'top 85%', once: true },
+        y: 40,
+        opacity: 0,
+        duration: 0.7,
+        ease: 'power3.out',
+        stagger: 0.1,
+      })
+    }, ref)
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section id="clients" ref={ref} className="relative py-24 sm:py-32 px-6 sm:px-10 lg:px-16 bg-deep overflow-hidden">
+      <div className="absolute inset-0 grid-bg opacity-20" />
+      <div className="absolute -top-24 right-0 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+          <div>
+            <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary">╱ Our clients</span>
+            <h2 className="font-display font-extrabold text-white mt-4 leading-[0.92] tracking-tight">
+              <span className="block text-5xl sm:text-6xl md:text-7xl">Brands We've</span>
+              <span className="block font-serif italic font-medium text-primary text-6xl sm:text-7xl md:text-8xl">Built For.</span>
+            </h2>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="font-display font-extrabold text-5xl text-primary">{CLIENTS.length}</span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/40 leading-tight">
+              Brands<br />& counting
+            </span>
+          </div>
+        </div>
+
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {CLIENTS.map((client, i) => (
+            <article
+              key={i}
+              className="client-card group relative bg-surface border border-divider rounded-4xl p-6 flex flex-col gap-5 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10"
+            >
+              {/* Top row: logo + category */}
+              <div className="flex items-center gap-4">
+                <div className={`h-16 w-16 flex-shrink-0 rounded-2xl flex items-center justify-center overflow-hidden ${client.logoBg}`}>
+                  {client.logo ? (
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="h-full w-full object-contain p-2"
+                    />
+                  ) : (
+                    <span className="text-3xl">{client.emoji}</span>
+                  )}
+                </div>
+                <div className="min-w-0">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-primary block">
+                    {client.category}
+                  </span>
+                  <h3 className="font-display font-bold text-lg text-ink mt-0.5 leading-tight truncate">
+                    {client.name}
+                  </h3>
+                  {client.founder && (
+                    <p className="font-serif italic text-muted text-sm mt-0.5">
+                      Founder · {client.founder}
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-muted text-sm leading-relaxed flex-1">{client.desc}</p>
+
+              {/* Services */}
+              <div className="flex flex-wrap gap-1.5">
+                {client.services.map((s) => (
+                  <span
+                    key={s}
+                    className="font-mono text-[9px] uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 px-2 py-1 rounded-full"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+
+              {/* Link */}
+              {(client.link || client.website) && (
+                <a
+                  href={client.website || client.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-muted hover:text-primary transition group-hover:text-primary"
+                >
+                  {client.handle || 'Visit Website'}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ----------------------------------------------------------------
+   Testimonials Section — What Our Clients Say
+---------------------------------------------------------------- */
+function TestimonialsSection() {
+  const [active, setActive] = useState(0)
+  const ref = useRef(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  const t = TESTIMONIALS[active]
+
+  return (
+    <section
+      ref={ref}
+      className="relative py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden"
+    >
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-64 w-[40rem] rounded-full bg-primary/8 blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-5xl mx-auto">
+        {/* Header */}
+        <div
+          className={`text-center mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+        >
+          <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary">╱ Client reviews</span>
+          <h2 className="font-display font-extrabold text-ink mt-4 leading-[0.92] tracking-tight">
+            <span className="block text-4xl sm:text-5xl md:text-6xl">What Clients</span>
+            <span className="block font-serif italic font-medium text-primary text-5xl sm:text-6xl md:text-7xl">
+              Actually Say.
+            </span>
+          </h2>
+        </div>
+
+        {/* Avatar selector row */}
+        <div className="flex items-center justify-center gap-6 mb-10">
+          {TESTIMONIALS.map((t, i) => (
+            <button
+              key={t.id}
+              onClick={() => setActive(i)}
+              className="flex flex-col items-center gap-2 group"
+            >
+              <div
+                className={`h-14 w-14 rounded-full flex items-center justify-center font-display font-bold text-lg transition-all duration-300 ${t.color} ${
+                  active === i
+                    ? 'ring-2 ring-primary ring-offset-2 ring-offset-background scale-110 shadow-lg shadow-primary/30'
+                    : 'opacity-50 group-hover:opacity-80 group-hover:scale-105'
+                }`}
+              >
+                {t.initials}
+              </div>
+              <span
+                className={`font-mono text-[9px] uppercase tracking-widest transition-colors ${
+                  active === i ? 'text-primary' : 'text-muted'
+                }`}
+              >
+                {t.company}
+              </span>
+            </button>
+          ))}
+        </div>
+
+        {/* Testimonial card */}
+        <div
+          key={active}
+          className="bg-surface border border-divider rounded-5xl p-8 sm:p-12 shadow-2xl shadow-black/50"
+          style={{ animation: 'rain-fadein 0.4s ease-out' }}
+        >
+          {/* Stars */}
+          <div className="flex items-center gap-1 mb-6">
+            {Array.from({ length: t.rating }).map((_, i) => (
+              <Star key={i} className="h-5 w-5 text-primary fill-primary" />
+            ))}
+          </div>
+
+          {/* Quote */}
+          <blockquote className="font-display font-semibold text-xl sm:text-2xl md:text-3xl text-ink leading-[1.3] tracking-tight mb-8">
+            {t.quote}
+          </blockquote>
+
+          {/* Attribution */}
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center gap-4">
+              <div
+                className={`h-12 w-12 rounded-full flex items-center justify-center font-display font-bold ${t.color}`}
+              >
+                {t.initials}
+              </div>
+              <div>
+                <p className="font-display font-bold text-ink">{t.name}</p>
+                <p className="font-mono text-[10px] uppercase tracking-widest text-muted">{t.role}</p>
+              </div>
+            </div>
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full">
+              {t.company}
+            </span>
+          </div>
+        </div>
+
+        {/* Dot pagination */}
+        <div className="flex items-center justify-center gap-2 mt-6">
+          {TESTIMONIALS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                active === i ? 'w-8 bg-primary' : 'w-1.5 bg-divider hover:bg-primary/40'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ----------------------------------------------------------------
    Trust Signals
 ---------------------------------------------------------------- */
 function TrustSignals() {
@@ -1583,6 +1947,8 @@ export default function App() {
         <Pillars />
         <Protocol />
         <ServicesGrid />
+        <ClientsSection />
+        <TestimonialsSection />
         <TrustSignals />
         <ContactForm />
       </main>
